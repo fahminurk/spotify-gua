@@ -1,0 +1,191 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "Fahmi Nurkamil",
+      "email": "fahmi@gmail.com",
+      "password": "qwertyasd",
+      "birthdate": "",
+      "gender": "Male"
+    },
+    {
+      "email": "user1@gmail.com",
+      "name": "",
+      "password": "user1234",
+      "gender": "Male",
+      "birthdate": null,
+      "id": 5
+    },
+    {
+      "email": "user2@gmail.com",
+      "name": "",
+      "password": "qwerty123",
+      "gender": "Male",
+      "birthdate": null,
+      "id": 6
+    },
+    {
+      "email": "user4@gmail.com",
+      "name": "user4",
+      "password": "qwerty123",
+      "gender": "Male",
+      "birthdate": null,
+      "id": 7
+    },
+    {
+      "email": "user5@gmail.com",
+      "name": "user1",
+      "password": "qwerty123",
+      "gender": "Male",
+      "birthdate": "1999-01-19T17:00:00.000Z",
+      "id": 8
+    },
+    {
+      "email": "fahminur@gmail.com",
+      "name": "Fahmi nurkamil",
+      "password": "qwert123",
+      "gender": "Male",
+      "birthdate": "1997-01-30T17:00:00.000Z",
+      "id": 9
+    }
+  ],
+
+  "todo": [],
+
+  "musics": [
+    {
+      "title": "Lilac",
+      "singer": "IU",
+      "src": "IU - lilac.mp3",
+      "img": "https://upload.wikimedia.org/wikipedia/id/4/41/IU_-_Lilac.png"
+    },
+    {
+      "title": "Celebrity",
+      "singer": "IU",
+      "src": "IU - Celebrity.mp3",
+      "img": "https://upload.wikimedia.org/wikipedia/id/4/41/IU_-_Lilac.png"
+    },
+    {
+      "title": "What is love",
+      "singer": "TWICE",
+      "src": "TWICE  - What is love.mp3",
+      "img": "https://upload.wikimedia.org/wikipedia/id/b/bf/Twice_Summer_Nights.jpg"
+    },
+    {
+      "title": "BBIBBI",
+      "singer": "IU",
+      "src": "IU -  BBIBBI.mp3",
+      "img": "https://upload.wikimedia.org/wikipedia/en/6/63/IU_%E2%80%93_Bbibbi.png"
+    },
+    {
+      "title": "あの夢をなぞって",
+      "singer": "YOASOBI",
+      "src": "YOASOBI-あの夢をなぞって.mp3",
+      "img": "https://e0.pxfuel.com/wallpapers/914/962/desktop-wallpaper-the-book-yoasobi.jpg"
+    },
+    {
+      "title": "たぶん",
+      "singer": "YOASOBI",
+      "src": "YOASOBI-たぶん.mp3",
+      "img": "https://e0.pxfuel.com/wallpapers/914/962/desktop-wallpaper-the-book-yoasobi.jpg"
+    },
+    {
+      "title": "アイロニ (Irony)",
+      "singer": "Majiko",
+      "src": "Majiko-Irony.mp3",
+      "img": "https://t2.genius.com/unsafe/409x409/https%3A%2F%2Fimages.genius.com%2F5dbc37cb2510ab6e4dbfbc069d97cbb9.440x440x1.jpg"
+    }
+  ],
+  "playlist": [
+    {
+      "id": 1,
+      "type": "",
+      "createdBy": "fahmi@gmail.com",
+      "imgURL": "https://i.ibb.co/zrfwWgb/playlist-1.jpg",
+      "playlist": "JPN",
+      "desc": "start your day with YOASOBI",
+      "list": [
+        {
+          "title": "あの夢をなぞって",
+          "singer": "YOASOBI",
+          "src": "YOASOBI-あの夢をなぞって.mp3",
+          "img": "https://e0.pxfuel.com/wallpapers/914/962/desktop-wallpaper-the-book-yoasobi.jpg"
+        },
+        {
+          "title": "たぶん",
+          "singer": "YOASOBI",
+          "src": "YOASOBI-たぶん.mp3",
+          "img": "https://e0.pxfuel.com/wallpapers/914/962/desktop-wallpaper-the-book-yoasobi.jpg"
+        },
+        {
+          "title": "アイロニ (Irony)",
+          "singer": "Majiko",
+          "src": "Majiko-Irony.mp3",
+          "img": "https://t2.genius.com/unsafe/409x409/https%3A%2F%2Fimages.genius.com%2F5dbc37cb2510ab6e4dbfbc069d97cbb9.440x440x1.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "",
+      "createdBy": "spotify",
+      "imgURL": "https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb016288add2edec88ecd87e83/1/en/default",
+      "playlist": "Daily Mix 1",
+      "desc": "Sammy Simorangkir, Juicy Luicy, Mahalini and more",
+      "list": [
+        {
+          "title": "Sial",
+          "singer": "Mahalini",
+          "src": "Mahalini-Sial.mp3",
+          "img": "https://i.scdn.co/image/ab6761610000e5ebb8333468abeb2e461d1ab5ea"
+        },
+        {
+          "title": "Tak Mampu Pergi",
+          "singer": "Sammy Simorangkir",
+          "src": "Sammy Simorangkir-Tak Mampu Pergi.mp3",
+          "img": "https://i.scdn.co/image/ab6761610000e5eb016288add2edec88ecd87e83"
+        },
+        {
+          "title": "Tanpa Tergesa",
+          "singer": "Juicy Luicy",
+          "src": "Juicy Luicy - Tanpa Tergesa.mp3",
+          "img": "https://i.scdn.co/image/ab67616d0000b273895ef71f3b84221075ac06f5"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "",
+      "createdBy": "fahmi@gmail.com",
+      "imgURL": "https://i.ibb.co/mzXs6FJ/playlist-korea.jpg",
+      "playlist": "Korea dulu boss",
+      "desc": "IU di hati",
+      "list": [
+        {
+          "title": "Lilac",
+          "singer": "IU",
+          "src": "IU - lilac.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/id/4/41/IU_-_Lilac.png"
+        },
+        {
+          "title": "Celebrity",
+          "singer": "IU",
+          "src": "IU - Celebrity.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/id/4/41/IU_-_Lilac.png"
+        },
+        {
+          "title": "What is love",
+          "singer": "TWICE",
+          "src": "TWICE  - What is love.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/id/b/bf/Twice_Summer_Nights.jpg"
+        },
+        {
+          "title": "BBIBBI",
+          "singer": "IU",
+          "src": "IU -  BBIBBI.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/en/6/63/IU_%E2%80%93_Bbibbi.png"
+        }
+      ]
+    }
+  ]
+}
