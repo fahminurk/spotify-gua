@@ -125,34 +125,7 @@
         }
       ]
     },
-    {
-      "id": 2,
-      "type": "",
-      "createdBy": "spotify",
-      "imgURL": "https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb016288add2edec88ecd87e83/1/en/default",
-      "playlist": "Daily Mix 1",
-      "desc": "Sammy Simorangkir, Juicy Luicy, Mahalini and more",
-      "list": [
-        {
-          "title": "Sial",
-          "singer": "Mahalini",
-          "src": "Mahalini-Sial.mp3",
-          "img": "https://i.scdn.co/image/ab6761610000e5ebb8333468abeb2e461d1ab5ea"
-        },
-        {
-          "title": "Tak Mampu Pergi",
-          "singer": "Sammy Simorangkir",
-          "src": "Sammy Simorangkir-Tak Mampu Pergi.mp3",
-          "img": "https://i.scdn.co/image/ab6761610000e5eb016288add2edec88ecd87e83"
-        },
-        {
-          "title": "Tanpa Tergesa",
-          "singer": "Juicy Luicy",
-          "src": "Juicy Luicy - Tanpa Tergesa.mp3",
-          "img": "https://i.scdn.co/image/ab67616d0000b273895ef71f3b84221075ac06f5"
-        }
-      ]
-    },
+
     {
       "id": 3,
       "type": "",

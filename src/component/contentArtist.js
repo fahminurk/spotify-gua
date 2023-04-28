@@ -9,13 +9,7 @@ export default function ContentArtist(props) {
   }, [props.data]);
 
   return (
-    <Box
-      className="container_artis"
-      zIndex={1}
-      bg="black"
-      w={"100%"}
-      // pt={"64px"}
-    >
+    <Box className="container_artis" zIndex={1} bg="black" w={"100%"}>
       <Box p="20px" w={"100%"} bg={"black"}>
         <Flex
           className="title"

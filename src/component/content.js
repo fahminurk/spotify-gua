@@ -11,31 +11,60 @@ export default function Content(props) {
     console.log(props.data);
   }, [props.data]);
 
+  // const carousel = document.querySelector(".babi");
+  // let isDragStart = false,
+  //   prevPageX,
+  //   prevScrollLeft;
+
+  // const dragStart = (e) => {
+  //   isDragStart = true;
+  //   prevPageX = e.pageX;
+  //   prevScrollLeft = carousel.scrollLeft;
+  // };
+
+  // const dragging = (e) => {
+  //   if (!isDragStart) return;
+  //   e.preventDefault();
+  //   let positionDiff = e.pageX - prevPageX;
+  //   carousel.scrollLeft = prevScrollLeft - positionDiff;
+  // };
+  // const dragStop = () => {
+  //   isDragStart = false;
+  // };
+  // carousel.addEventListener("mousedown", dragStart);
+  // carousel.addEventListener("mousemove", dragging);
+  // carousel.addEventListener("mouseup", dragStop);
+
   return (
     <Box
       className="container_playlist"
       w="100%"
       zIndex={1}
       bg="black"
-      overflowX={"hidden"}
       // pl="241px"
       h={"100vh"}
     >
-      <Box className="pembungkus_card" p="20px" bgColor={"black"}>
+      <Box
+        className="pembungkus_card"
+        p="20px"
+        bgColor={"black"}
+        overflow={"hidden"}
+        // whiteSpace={"nowrap"}
+        // w={"100vw"}
+      >
         <Flex
           className="title"
           justifyContent={"space-between"}
           alignItems={"center"}
-          fontSize="20px"
+          fontSize={"1em"}
           color="white"
           p="10px 0px"
-          // whiteSpace={"nowrap"}
         >
           <Box>For you {userSelector?.name}</Box>
 
           <Box>Show all</Box>
         </Flex>
-        <Box className="babi" display={"flex"} gap={5} w={1246}>
+        <Box className="babi" display={"flex"} gap={5} w={"1245px"}>
           {props.data?.map((val) => (
             <Card1
               url={val.imgURL}
@@ -57,9 +86,8 @@ function Card1(props) {
   return (
     <Box
       className="card"
-      // bg={"pink"}
-      width={"170px"}
-      height={"300px"}
+      width={"200px"}
+      // height={"280"}
       padding={"15px"}
       borderRadius={"10px"}
       bg={"#0f0f0f"}
@@ -77,22 +105,14 @@ function Card1(props) {
         <Badge colorScheme="purple" fontSize={"8px"}>
           For you
         </Badge>
-        <Box
-          color="white"
-          // height={"30px"}
-          className="judul"
-          fontWeight={"bold"}
-        >
+        <Box color="white" className="judul" fontWeight={"bold"}>
           {props.judul}
         </Box>
 
-        <Box
-          color={"#9f9f9f"}
-          // height={"50px"}
-          className="desc"
-          fontSize={"14px"}
-        >
-          {props.desc}
+        <Box color={"#9f9f9f"} className="desc" fontSize={"14px"}>
+          {props.desc.length > 30
+            ? props.desc.substring(0, 30) + "..."
+            : props.desc}
         </Box>
       </Box>
     </Box>
