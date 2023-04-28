@@ -6,6 +6,10 @@ import Sidebar from "../component/Sidebar";
 import axios from "axios";
 import Playbar from "../component/playbar";
 import { useSelector } from "react-redux";
+import ContentArtist from "../component/contentArtist";
+import { Box } from "@chakra-ui/react";
+import "../css/home.css";
+
 export default function HomePage() {
   let nav = useNavigate();
   const userSelector = useSelector((state) => state.auth);
@@ -21,6 +25,8 @@ export default function HomePage() {
   const [playlist, setPlaylist] = useState([]);
   const [homePlaylist, setHomePlaylist] = useState([]);
   const [sidePlaylist, setSidePlaylist] = useState();
+
+  const [artis, setArtis] = useState([]);
 
   async function fetchData() {
     await axios
@@ -38,6 +44,10 @@ export default function HomePage() {
         },
       })
       .then((res) => setSidePlaylist(res.data));
+
+    await axios
+      .get("http://localhost:2000/artist")
+      .then((res) => setArtis(res.data));
   }
 
   useEffect(() => {
@@ -52,7 +62,19 @@ export default function HomePage() {
         sidePlaylist={sidePlaylist}
         setPlaylist={setPlaylist}
       />
-      <Content key={"content"} data={homePlaylist} setPlaylist={setPlaylist} />
+      <Box className="konten">
+        <ContentArtist
+          key={"contentArtist"}
+          data={artis}
+          setPlaylist={setPlaylist}
+        />
+        <Content
+          key={"content"}
+          data={homePlaylist}
+          setPlaylist={setPlaylist}
+        />
+      </Box>
+
       <Playbar key={"playbar"} playlist={playlist} />
     </>
   );

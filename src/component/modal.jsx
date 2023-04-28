@@ -7,14 +7,49 @@ import {
   Input,
   Textarea,
   Center,
+  Box,
 } from "@chakra-ui/react";
-import { useState } from "react";
+
 import { IoMdClose } from "react-icons/io";
+import { useFormik } from "formik";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
 export function CreatePlaylist(props) {
   const [imgUrl, setImgUrl] = useState(
     require("../assets/default-spotify.png")
   );
 
+  //
+  // const [newPlaylist, setNewPlaylist] = useState({
+  //   title: "",
+  //   desc: "",
+  //   img: "",
+  //   list: [],
+  // });
+
+  // const formik = useFormik({
+  //   initialValues: {
+  //     title: "",
+  //     desc: "",
+  //     img: "",
+  //     list: [],
+  //   },
+  // }),
+  // onSubmit: async () => {
+  //   const newPlaylist = { title, desc, img, list };
+  //   await axios
+  //     .post("http://localhost:2000/newPlaylist", newPlaylist)
+  //     .then((res) => {});
+  // };
+
+  // useEffect(() => {}, [newPlaylist]);
+
+  // function inputHandler(event) {
+  //   const { value, id } = event.target;
+  //   formik.setFieldValue(id, value);
+  // }
+  //
   function input(e) {
     if (!e.target.value) {
       setImgUrl(require("../assets/default-spotify.png"));
@@ -89,9 +124,15 @@ export function CreatePlaylist(props) {
           </Flex>
         </Flex>
         <Flex flexDir={"column"}>
-          <Flex paddingX={"24px"} fontWeight={"bold"}>
-            Add Musics
-          </Flex>
+          {/* <Flex
+            paddingX={"24px"}
+            fontWeight={"bold"}
+            justifyContent={"space-between"}
+          >
+            <Box>Add Musics</Box>
+            <Box>Title</Box>
+            <Box>Artist</Box>
+          </Flex> */}
           <ListMusics />
         </Flex>
 
@@ -112,7 +153,7 @@ export function CreatePlaylist(props) {
   );
 }
 
-export function ListMusics() {
+export function ListMusics(props) {
   return (
     <>
       <Flex flexDir={"column"} paddingBottom="10px" gap={"10px"}>
@@ -122,14 +163,19 @@ export function ListMusics() {
           maxH={"550px"}
           overflow={"hidden"}
         >
-          <GridItem w="100%" h="25px"></GridItem>
-          <GridItem w="100%" h="25px" fontWeight={"bold"}>
-            Title
+          <GridItem w="100%" h="25px">
+            <Center>Add Musics</Center>
           </GridItem>
           <GridItem w="100%" h="25px" fontWeight={"bold"}>
-            Artist
+            <Center>Title</Center>
+          </GridItem>
+          <GridItem w="100%" h="25px" fontWeight={"bold"}>
+            <Center>Artist</Center>
           </GridItem>
 
+          <GridItem w="100%" h="25px"></GridItem>
+          <GridItem w="100%" h="25px" fontWeight={"bold"}></GridItem>
+          <GridItem w="100%" h="25px" fontWeight={"bold"}></GridItem>
           <GridItem w="100%" h="25px" fontWeight={"bold"}>
             <Center>Add</Center>
           </GridItem>

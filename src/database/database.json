@@ -50,7 +50,7 @@
     }
   ],
 
-  "todo": [],
+  "newPlaylist": [],
 
   "musics": [
     {
@@ -186,6 +186,258 @@
           "img": "https://upload.wikimedia.org/wikipedia/en/6/63/IU_%E2%80%93_Bbibbi.png"
         }
       ]
+    },
+    {
+      "id": 3,
+      "type": "",
+      "createdBy": "fahmi@gmail.com",
+      "imgURL": "https://i.ibb.co/mzXs6FJ/playlist-korea.jpg",
+      "playlist": "Korea dulu boss",
+      "desc": "IU di hati",
+      "list": [
+        {
+          "title": "Lilac",
+          "singer": "IU",
+          "src": "IU - lilac.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/id/4/41/IU_-_Lilac.png"
+        },
+        {
+          "title": "Celebrity",
+          "singer": "IU",
+          "src": "IU - Celebrity.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/id/4/41/IU_-_Lilac.png"
+        },
+        {
+          "title": "What is love",
+          "singer": "TWICE",
+          "src": "TWICE  - What is love.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/id/b/bf/Twice_Summer_Nights.jpg"
+        },
+        {
+          "title": "BBIBBI",
+          "singer": "IU",
+          "src": "IU -  BBIBBI.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/en/6/63/IU_%E2%80%93_Bbibbi.png"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "",
+      "createdBy": "fahmi@gmail.com",
+      "imgURL": "https://i.ibb.co/mzXs6FJ/playlist-korea.jpg",
+      "playlist": "Korea dulu boss",
+      "desc": "IU di hati",
+      "list": [
+        {
+          "title": "Lilac",
+          "singer": "IU",
+          "src": "IU - lilac.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/id/4/41/IU_-_Lilac.png"
+        },
+        {
+          "title": "Celebrity",
+          "singer": "IU",
+          "src": "IU - Celebrity.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/id/4/41/IU_-_Lilac.png"
+        },
+        {
+          "title": "What is love",
+          "singer": "TWICE",
+          "src": "TWICE  - What is love.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/id/b/bf/Twice_Summer_Nights.jpg"
+        },
+        {
+          "title": "BBIBBI",
+          "singer": "IU",
+          "src": "IU -  BBIBBI.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/en/6/63/IU_%E2%80%93_Bbibbi.png"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "",
+      "createdBy": "fahmi@gmail.com",
+      "imgURL": "https://i.ibb.co/mzXs6FJ/playlist-korea.jpg",
+      "playlist": "Korea dulu boss",
+      "desc": "IU di hati",
+      "list": [
+        {
+          "title": "Lilac",
+          "singer": "IU",
+          "src": "IU - lilac.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/id/4/41/IU_-_Lilac.png"
+        },
+        {
+          "title": "Celebrity",
+          "singer": "IU",
+          "src": "IU - Celebrity.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/id/4/41/IU_-_Lilac.png"
+        },
+        {
+          "title": "What is love",
+          "singer": "TWICE",
+          "src": "TWICE  - What is love.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/id/b/bf/Twice_Summer_Nights.jpg"
+        },
+        {
+          "title": "BBIBBI",
+          "singer": "IU",
+          "src": "IU -  BBIBBI.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/en/6/63/IU_%E2%80%93_Bbibbi.png"
+        }
+      ]
+    }
+  ],
+  "artist": [
+    {
+      "id": 1,
+      "type": "",
+      "artist": "IU",
+      "imgURL": "https://i.ibb.co/94BPxHh/iu.jpg",
+      "list": [
+        {
+          "title": "Lilac",
+          "singer": "IU",
+          "src": "IU - lilac.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/id/4/41/IU_-_Lilac.png"
+        },
+        {
+          "title": "Celebrity",
+          "singer": "IU",
+          "src": "IU - Celebrity.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/id/4/41/IU_-_Lilac.png"
+        },
+        {
+          "title": "BBIBBI",
+          "singer": "IU",
+          "src": "IU -  BBIBBI.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/en/6/63/IU_%E2%80%93_Bbibbi.png"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "",
+      "artist": "YOASOBI",
+      "imgURL": "https://i.ibb.co/3WWRx5j/yoasobi.jpg",
+      "list": [
+        {
+          "title": "あの夢をなぞって",
+          "singer": "YOASOBI",
+          "src": "YOASOBI-あの夢をなぞって.mp3",
+          "img": "https://e0.pxfuel.com/wallpapers/914/962/desktop-wallpaper-the-book-yoasobi.jpg"
+        },
+        {
+          "title": "たぶん",
+          "singer": "YOASOBI",
+          "src": "YOASOBI-たぶん.mp3",
+          "img": "https://e0.pxfuel.com/wallpapers/914/962/desktop-wallpaper-the-book-yoasobi.jpg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "",
+      "artist": "TWICE",
+      "imgURL": "https://i.ibb.co/4TTYCfw/twice.jpg",
+      "list": [
+        {
+          "title": "What is love",
+          "singer": "TWICE",
+          "src": "TWICE  - What is love.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/id/b/bf/Twice_Summer_Nights.jpg"
+        },
+        {
+          "title": "The Feels",
+          "singer": "TWICE",
+          "src": "TWICE -The Feels.mp3",
+          "img": "https://t2.genius.com/unsafe/212x212/https%3A%2F%2Fimages.genius.com%2F8a9e9dd7c8ef121fe2a36b29c37157cc.1000x1000x1.png"
+        },
+        {
+          "title": "FANCY",
+          "singer": "TWICE",
+          "src": "TWICE -FANCY.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/en/0/09/Twice_-_Fancy_You.png"
+        },
+        {
+          "title": "Talk that Talk",
+          "singer": "TWICE",
+          "src": "TWICE -Talk that Talk.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/en/6/67/Twice_-_Between_1%262.png"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "",
+      "artist": "All Time Low",
+      "imgURL": "https://static.wikia.nocookie.net/alltimelow/images/f/f0/Tumblr_nlx5265SFF1qjbl3ko1_1280.jpg",
+      "list": [
+        {
+          "title": "Ground Control (Feat. Tegan & Sara)",
+          "singer": "All Time Low",
+          "src": "All Time Low_  Ground Control (Feat. Tegan & Sara).mp3",
+          "img": "https://t2.genius.com/unsafe/409x409/https%3A%2F%2Fimages.genius.com%2Fcd18db31771c573928bdc2e6dbb7273d.1000x1000x1.jpg"
+        },
+        {
+          "title": "Dear Maria, Count Me In",
+          "singer": "All Time Low",
+          "src": "All Time Low - Dear Maria, Count Me In.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/en/2/24/Dear_Maria%2C_Count_Me_In_%28album_cover%29.jpg"
+        },
+        {
+          "title": "Kids In The Dark",
+          "singer": "All Time Low",
+          "src": "All Time Low - Kids In The Dark.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/en/a/a3/All_Time_Low%2C_Future_Hearts_album_cover%2C_2015.jpg"
+        },
+        {
+          "title": "Missing You",
+          "singer": "All Time Low",
+          "src": "All Time Low - Missing You.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/en/a/a3/All_Time_Low%2C_Future_Hearts_album_cover%2C_2015.jpg"
+        },
+        {
+          "title": "Something's Gotta Give)",
+          "singer": "All Time Low",
+          "src": "All Time Low - Something's Gotta Give.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/en/a/a3/All_Time_Low%2C_Future_Hearts_album_cover%2C_2015.jpg"
+        },
+        {
+          "title": "Weightless",
+          "singer": "All Time Low",
+          "src": "All Time Low - Weightless.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/en/d/db/AllTimeLow-Weightless.jpg"
+        },
+        {
+          "title": "Drugs & Candy",
+          "singer": "All Time Low",
+          "src": "All Time Low_ Drugs & Candy.mp3",
+          "img": "https://t2.genius.com/unsafe/409x409/https%3A%2F%2Fimages.genius.com%2Fcd18db31771c573928bdc2e6dbb7273d.1000x1000x1.jpg"
+        },
+        {
+          "title": "Sleepwalking",
+          "singer": "All Time Low",
+          "src": "All Time Low_ Sleepwalking.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/en/e/e0/Tell_Me_I%27m_Alive_All_Time_Low.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "",
+      "artist": "TWICE",
+      "imgURL": "https://i.ibb.co/4TTYCfw/twice.jpg",
+      "list": []
+    },
+    {
+      "id": 3,
+      "type": "",
+      "artist": "TWICE",
+      "imgURL": "https://i.ibb.co/4TTYCfw/twice.jpg",
+      "list": []
     }
   ]
 }

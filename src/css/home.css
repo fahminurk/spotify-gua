@@ -1,14 +1,133 @@
-/* .bg_gradasi {
-  background-image: linear-gradient(green, black);
-} */
-/* .card:hover {
-  background-color: #4d4d4d;
-} */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 
-/* .kontener_navbar {
-  background-image: linear-gradient(black, green);
-} */
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-/* * {
-  background: black;
-} */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #101010;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4d4d4d;
+}
+
+.scrollbox-sidebar:hover {
+  overflow-y: scroll;
+}
+
+.play {
+  height: 300px;
+  width: 181px;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  display: grid;
+  justify-items: end;
+  align-content: center;
+  padding-right: 16px;
+  padding-top: 20px;
+  transition: 0.5s;
+}
+.play:hover {
+  opacity: 1;
+  height: 260px;
+}
+
+.play1 {
+  height: 80px;
+  width: 400px;
+  position: absolute;
+  z-index: 1;
+  display: grid;
+  justify-items: end;
+  align-content: center;
+  padding-right: 16px;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.play1:hover {
+  opacity: 1;
+}
+
+/* konten */
+.container_artis {
+  padding-left: 241px;
+  width: 100%;
+  padding-top: 60px;
+}
+
+.anjing {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 19px;
+}
+
+.container_playlist {
+  padding-left: 241px;
+}
+
+/* navbar */
+.container-navbar {
+  padding-left: 241px;
+  position: fixed;
+}
+
+/* playbar */
+.container-playbar {
+  position: fixed;
+}
+
+.judul-artis {
+  display: flex;
+  flex-direction: column;
+}
+.msc-love {
+  display: flex;
+}
+
+.volumee {
+  display: flex;
+  justify-content: right;
+  justify-items: center;
+  align-items: center;
+}
+@media (max-width: 800px) {
+  .anjing {
+    grid-template-columns: 1fr 1fr;
+  }
+  .bigbox {
+    display: none;
+  }
+  .container_artis {
+    padding-left: 0;
+  }
+  .container-navbar {
+    padding-left: 0;
+  }
+  .container_playlist {
+    padding-left: 0;
+  }
+  .judul-artis {
+    display: none;
+  }
+  .msc-love {
+    display: none;
+  }
+  .iconplaybar {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .anjing {
+    grid-template-columns: 1fr;
+  }
+}

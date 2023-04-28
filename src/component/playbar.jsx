@@ -10,9 +10,7 @@ import {
   SliderTrack,
   SliderFilledTrack,
   SliderThumb,
-  SliderMark,
   Center,
-  Tooltip,
 } from "@chakra-ui/react";
 import {
   BiSkipNext,
@@ -20,7 +18,6 @@ import {
   BiSkipPrevious,
   BiRepeat,
 } from "react-icons/bi";
-// import "../css/playbar.css";
 import { AiOutlineHeart } from "react-icons/ai";
 import {
   BsPip,
@@ -31,6 +28,8 @@ import { TbMicrophone2, TbDevices2 } from "react-icons/tb";
 import { HiOutlineQueueList } from "react-icons/hi2";
 import { SlVolume2 } from "react-icons/sl";
 import { useEffect, useState } from "react";
+import "../css/home.css";
+import { TiArrowShuffle } from "react-icons/ti";
 
 export default function Playbar(props) {
   // STATING VARIABLE
@@ -120,21 +119,16 @@ export default function Playbar(props) {
   }
 
   return (
-    <Container className="kertas" margin={0} padding={0}>
-      {/* <Box w="100%" h="570px"></Box> */}
-
-      <Flex
-        className="music-container"
-        bg={"black"}
-        w="100%"
-        h={112}
-        position={"fixed"}
-        bottom={0}
-        direction="row"
-        align="center"
-        justify="center"
-        zIndex={3}
-      >
+    <Box
+      className="container-playbar"
+      bg={"black"}
+      w="100%"
+      // position={"fixed"}
+      bottom={-1}
+      zIndex={9}
+      p={"15px 10px"}
+    >
+      <Flex align="center" justify="center">
         {/* KETERANGAN MUSIC */}
 
         <Flex
@@ -146,28 +140,24 @@ export default function Playbar(props) {
         >
           <Image
             src={props.playlist?.length ? props.playlist[counter]?.img : null}
-            w={70}
-            h={70}
+            boxSize={"60px"}
           />
-          <Flex
-            className="msc-intr"
-            // justify={"center"}
-            b
-            flexDir={"column"}
-          >
+          <Box className="judul-artis" fontSize={"13px"}>
             <Link href="#" color={"white"}>
               {props.playlist?.length ? props.playlist[counter]?.title : null}
             </Link>
             <Link href="#" color={"white"}>
               {props.playlist?.length ? props.playlist[counter]?.singer : null}
             </Link>
-          </Flex>
-          <Link href="#">
-            <Icon as={AiOutlineHeart} w={5} h={5} color={"white"}></Icon>
-          </Link>
-          <Link href="#">
-            <Icon as={BsPip} w={4} h={4} color={"white"}></Icon>
-          </Link>
+          </Box>
+          <Box gap={"5px"} className="msc-love">
+            <Box>
+              <Link boxSize={"20px"} as={AiOutlineHeart} color={"white"} />
+            </Box>
+            <Box>
+              <Link boxSize={"20px"} as={BsPip} color={"white"} />
+            </Box>
+          </Box>
         </Flex>
 
         {/* TOMBOL PLAYER MUSIC */}
@@ -176,20 +166,22 @@ export default function Playbar(props) {
           direction="column"
           align="center"
           justify="center"
-          width={"30%"}
+          // bg={"pink"}
+          w={"50%"}
         >
           <Flex
             className="ctrl-button"
             align={"center"}
-            width={"100%"}
             justify={"center"}
             gap={3}
+            w={"100%"}
           >
             <Box>
               <IconButton
                 variant={"link"}
-                as={BiShuffle}
-                style={{ width: "20px", height: "20px" }}
+                as={TiArrowShuffle}
+                boxSize={30}
+                pt={1}
                 color="#999"
               ></IconButton>
             </Box>
@@ -197,7 +189,9 @@ export default function Playbar(props) {
               <IconButton
                 variant={"link"}
                 as={BiSkipPrevious}
-                style={{ width: "50px", height: "50px" }}
+                boxSize={30}
+                pt={1}
+                _hover={{ color: "white" }}
                 color="#999"
                 onClick={async () => {
                   setCounter(counter - 1);
@@ -209,7 +203,7 @@ export default function Playbar(props) {
             <IconButton
               variant={"link"}
               as={pause ? BsFillPlayCircleFill : BsFillPauseCircleFill}
-              style={{ width: "50px", height: "50px" }}
+              boxSize={"30px"}
               color="white"
               onClick={() => play(!pause)}
               // onClick={() => audio.play()}
@@ -219,7 +213,9 @@ export default function Playbar(props) {
               <IconButton
                 variant={"link"}
                 as={BiSkipNext}
-                style={{ width: "50px", height: "50px" }}
+                boxSize={"30px"}
+                pt={1}
+                _hover={{ color: "white" }}
                 color="#999"
                 onClick={async () => {
                   setCounter(counter + 1);
@@ -231,7 +227,8 @@ export default function Playbar(props) {
               <IconButton
                 variant={"link"}
                 as={BiRepeat}
-                style={{ width: "20px", height: "20px" }}
+                boxSize={"30px"}
+                pt={1}
                 color="#999"
               ></IconButton>
             </Box>
@@ -242,8 +239,9 @@ export default function Playbar(props) {
             align={"center"}
             justify={"space-between"}
             width={"100%"}
+            gap={3}
           >
-            <Center color={"white"} width={10}>
+            <Center color={"white"} fontSize={12}>
               0{Math.floor(audio.currentTime / 60)}:{""}
               {Math.floor(audio.currentTime % 60) > 9
                 ? Math.floor(audio.currentTime % 60)
@@ -273,7 +271,7 @@ export default function Playbar(props) {
               </Slider>
             </Center>
 
-            <Center color={"white"} width={10}>
+            <Center fontSize={12} color={"white"} width={10}>
               0{Math.floor(duration / 60)}:{""}
               {Math.floor(duration % 60) > 9
                 ? Math.floor(duration % 60)
@@ -281,40 +279,43 @@ export default function Playbar(props) {
             </Center>
           </Flex>
         </Flex>
-        <Flex
-          className="msc-opt"
-          w={"30%"}
-          justify={"right"}
-          gap={2}
-          align={"center"}
-          h={50}
-        >
-          <Link>
-            <Icon as={TbMicrophone2} w={6} h={5} color={"white"}></Icon>
-          </Link>
-          <Link>
-            <Icon as={HiOutlineQueueList} w={6} h={5} color={"white"}></Icon>
-          </Link>
-          <Link>
-            <Icon as={TbDevices2} w={6} h={5} color={"white"}></Icon>
-          </Link>
-          <Link>
-            <Icon as={SlVolume2} w={6} h={5} color={"white"}></Icon>
-          </Link>
 
-          <Slider
-            aria-label="slider-ex-1"
-            w={28}
-            defaultValue={100}
-            onChange={(vol) => (audio.volume = vol / 100)}
-          >
-            <SliderTrack>
-              <SliderFilledTrack />
-            </SliderTrack>
-            <SliderThumb />
-          </Slider>
-        </Flex>
+        {/* volume */}
+        <Box
+          className="volumee"
+          w={"25%"}
+          // justify={"right"}
+          align={"center"}
+          gap={1}
+        >
+          <Box className="iconplaybar">
+            <Link>
+              <Icon as={TbMicrophone2} w={6} h={5} color={"white"}></Icon>
+            </Link>
+            <Link>
+              <Icon as={HiOutlineQueueList} w={6} h={5} color={"white"}></Icon>
+            </Link>
+            <Link>
+              <Icon as={TbDevices2} w={6} h={5} color={"white"}></Icon>
+            </Link>
+            <Link borderRadius={"full"}>
+              <Icon as={SlVolume2} w={6} h={5} color={"white"}></Icon>
+            </Link>
+
+            <Slider
+              aria-label="slider-ex-1"
+              w={28}
+              defaultValue={100}
+              onChange={(vol) => (audio.volume = vol / 100)}
+            >
+              <SliderTrack>
+                <SliderFilledTrack />
+              </SliderTrack>
+              <SliderThumb />
+            </Slider>
+          </Box>
+        </Box>
       </Flex>
-    </Container>
+    </Box>
   );
 }

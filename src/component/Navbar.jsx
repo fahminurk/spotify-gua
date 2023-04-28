@@ -29,33 +29,29 @@ export default function Navbar() {
   }
   return (
     <Box
-      id="kontener-navbar"
+      className="container-navbar"
       w={"100%"}
-      position={"fixed"}
-      zIndex={"1"}
-      pl="241px"
+      // position={"fixed"}
+      zIndex={1}
+      // pl="241px"
     >
-      <Box id="navbar" bgGradient="linear(to-t, black, #464646)" p={2}>
-        <Flex justifyContent={"space-between"}>
+      <Box bgGradient="linear(to-t, black, #464646)" p={"10px 10px"}>
+        <Flex justifyContent={"space-between"} alignItems={"center"}>
           <Flex id="right-left" w={"100px"} justifyContent={"space-between"}>
             <IconButton
               as={MdOutlineKeyboardArrowLeft}
-              // bgColor={"black"}
-              // color={"#A0A0A0"}
               color={"black"}
               _hover={{ background: "black", color: "white" }}
               cursor={"pointer"}
-              size={"lg"}
+              size={"md"}
               borderRadius={"full"}
             ></IconButton>
             <IconButton
               as={MdOutlineKeyboardArrowRight}
-              // bgColor={"black"}
-              // color={"#A0A0A0"}
               color={"black"}
               _hover={{ background: "black", color: "white" }}
               cursor={"pointer"}
-              size={"lg"}
+              size={"md"}
               borderRadius={"full"}
             ></IconButton>
           </Flex>

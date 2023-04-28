@@ -8,10 +8,6 @@ import {
   Modal,
   ModalOverlay,
   ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
 } from "@chakra-ui/react";
 import { AiFillHome } from "react-icons/ai";
 import { FiSearch } from "react-icons/fi";
@@ -26,6 +22,7 @@ import logo from "../assets/spotify-logo2.png";
 export default function Sidebar(props) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [scrollBehavior, setScrollBehavior] = React.useState("inside");
+
   return (
     // <Box>
     <Box
