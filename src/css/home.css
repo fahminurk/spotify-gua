@@ -115,13 +115,21 @@
   .container_playlist {
     padding-left: 0;
   }
-  .judul-artis {
-    display: none;
-  }
+
   .msc-love {
     display: none;
   }
   .iconplaybar {
+    display: none;
+  }
+  #shuffle,
+  #repeat {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  #judul-lagu,
+  #lagu {
     display: none;
   }
 }

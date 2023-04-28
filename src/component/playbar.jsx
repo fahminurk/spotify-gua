@@ -142,11 +142,11 @@ export default function Playbar(props) {
             src={props.playlist?.length ? props.playlist[counter]?.img : null}
             boxSize={"60px"}
           />
-          <Box className="judul-artis" fontSize={"13px"}>
-            <Link href="#" color={"white"}>
+          <Box className="judul-artis" fontSize={"0.9em"}>
+            <Link id="judul-lagu" href="#" color={"white"}>
               {props.playlist?.length ? props.playlist[counter]?.title : null}
             </Link>
-            <Link href="#" color={"white"}>
+            <Link id="lagu" href="#" color={"white"}>
               {props.playlist?.length ? props.playlist[counter]?.singer : null}
             </Link>
           </Box>
@@ -178,6 +178,7 @@ export default function Playbar(props) {
           >
             <Box>
               <IconButton
+                id="shuffle"
                 variant={"link"}
                 as={TiArrowShuffle}
                 boxSize={30}
@@ -225,6 +226,7 @@ export default function Playbar(props) {
             </Box>
             <Box>
               <IconButton
+                id="repeat"
                 variant={"link"}
                 as={BiRepeat}
                 boxSize={"30px"}

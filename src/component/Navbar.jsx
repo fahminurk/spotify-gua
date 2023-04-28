@@ -31,6 +31,7 @@ export default function Navbar() {
     <Box
       className="container-navbar"
       w={"100%"}
+      bg={"black"}
       // position={"fixed"}
       zIndex={1}
       // pl="241px"
