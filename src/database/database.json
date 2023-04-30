@@ -57,43 +57,50 @@
       "title": "Lilac",
       "singer": "IU",
       "src": "IU - lilac.mp3",
-      "img": "https://upload.wikimedia.org/wikipedia/id/4/41/IU_-_Lilac.png"
+      "img": "https://upload.wikimedia.org/wikipedia/id/4/41/IU_-_Lilac.png",
+      "id": 1
     },
     {
       "title": "Celebrity",
       "singer": "IU",
       "src": "IU - Celebrity.mp3",
-      "img": "https://upload.wikimedia.org/wikipedia/id/4/41/IU_-_Lilac.png"
-    },
-    {
-      "title": "What is love",
-      "singer": "TWICE",
-      "src": "TWICE  - What is love.mp3",
-      "img": "https://upload.wikimedia.org/wikipedia/id/b/bf/Twice_Summer_Nights.jpg"
+      "img": "https://upload.wikimedia.org/wikipedia/id/4/41/IU_-_Lilac.png",
+      "id": 2
     },
     {
       "title": "BBIBBI",
       "singer": "IU",
       "src": "IU -  BBIBBI.mp3",
-      "img": "https://upload.wikimedia.org/wikipedia/en/6/63/IU_%E2%80%93_Bbibbi.png"
+      "img": "https://upload.wikimedia.org/wikipedia/en/6/63/IU_%E2%80%93_Bbibbi.png",
+      "id": 3
     },
     {
       "title": "あの夢をなぞって",
       "singer": "YOASOBI",
       "src": "YOASOBI-あの夢をなぞって.mp3",
-      "img": "https://e0.pxfuel.com/wallpapers/914/962/desktop-wallpaper-the-book-yoasobi.jpg"
+      "img": "https://e0.pxfuel.com/wallpapers/914/962/desktop-wallpaper-the-book-yoasobi.jpg",
+      "id": 4
     },
     {
       "title": "たぶん",
       "singer": "YOASOBI",
       "src": "YOASOBI-たぶん.mp3",
-      "img": "https://e0.pxfuel.com/wallpapers/914/962/desktop-wallpaper-the-book-yoasobi.jpg"
+      "img": "https://e0.pxfuel.com/wallpapers/914/962/desktop-wallpaper-the-book-yoasobi.jpg",
+      "id": 5
     },
     {
       "title": "アイロニ (Irony)",
       "singer": "Majiko",
       "src": "Majiko-Irony.mp3",
-      "img": "https://t2.genius.com/unsafe/409x409/https%3A%2F%2Fimages.genius.com%2F5dbc37cb2510ab6e4dbfbc069d97cbb9.440x440x1.jpg"
+      "img": "https://t2.genius.com/unsafe/409x409/https%3A%2F%2Fimages.genius.com%2F5dbc37cb2510ab6e4dbfbc069d97cbb9.440x440x1.jpg",
+      "id": 6
+    },
+    {
+      "title": "What is love",
+      "singer": "TWICE",
+      "src": "TWICE  - What is love.mp3",
+      "img": "https://upload.wikimedia.org/wikipedia/id/b/bf/Twice_Summer_Nights.jpg",
+      "id": 7
     }
   ],
   "playlist": [
@@ -126,6 +133,40 @@
       ]
     },
 
+    {
+      "id": 3,
+      "type": "",
+      "createdBy": "fahmi@gmail.com",
+      "imgURL": "https://i.ibb.co/mzXs6FJ/playlist-korea.jpg",
+      "playlist": "Korea dulu boss",
+      "desc": "IU di hati",
+      "list": [
+        {
+          "title": "Lilac",
+          "singer": "IU",
+          "src": "IU - lilac.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/id/4/41/IU_-_Lilac.png"
+        },
+        {
+          "title": "Celebrity",
+          "singer": "IU",
+          "src": "IU - Celebrity.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/id/4/41/IU_-_Lilac.png"
+        },
+        {
+          "title": "What is love",
+          "singer": "TWICE",
+          "src": "TWICE  - What is love.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/id/b/bf/Twice_Summer_Nights.jpg"
+        },
+        {
+          "title": "BBIBBI",
+          "singer": "IU",
+          "src": "IU -  BBIBBI.mp3",
+          "img": "https://upload.wikimedia.org/wikipedia/en/6/63/IU_%E2%80%93_Bbibbi.png"
+        }
+      ]
+    },
     {
       "id": 3,
       "type": "",

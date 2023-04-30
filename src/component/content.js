@@ -11,30 +11,6 @@ export default function Content(props) {
     console.log(props.data);
   }, [props.data]);
 
-  // const carousel = document.querySelector(".babi");
-  // let isDragStart = false,
-  //   prevPageX,
-  //   prevScrollLeft;
-
-  // const dragStart = (e) => {
-  //   isDragStart = true;
-  //   prevPageX = e.pageX;
-  //   prevScrollLeft = carousel.scrollLeft;
-  // };
-
-  // const dragging = (e) => {
-  //   if (!isDragStart) return;
-  //   e.preventDefault();
-  //   let positionDiff = e.pageX - prevPageX;
-  //   carousel.scrollLeft = prevScrollLeft - positionDiff;
-  // };
-  // const dragStop = () => {
-  //   isDragStart = false;
-  // };
-  // carousel.addEventListener("mousedown", dragStart);
-  // carousel.addEventListener("mousemove", dragging);
-  // carousel.addEventListener("mouseup", dragStop);
-
   return (
     <Box
       className="container_playlist"
@@ -48,9 +24,8 @@ export default function Content(props) {
         className="pembungkus_card"
         p="20px"
         bgColor={"black"}
-        overflow={"hidden"}
+
         // whiteSpace={"nowrap"}
-        // w={"100vw"}
       >
         <Flex
           className="title"
@@ -64,7 +39,15 @@ export default function Content(props) {
 
           <Box>Show all</Box>
         </Flex>
-        <Box className="babi" display={"flex"} gap={5} w={"1245px"}>
+        <Box
+          className="babi"
+          // display={"flex"}
+          // flexWrap={"wrap"}
+          gap={5}
+          maxH={"290px"}
+          overflow={"hidden"}
+          // justifyContent={"space-evenly"}
+        >
           {props.data?.map((val) => (
             <Card1
               url={val.imgURL}
@@ -86,8 +69,8 @@ function Card1(props) {
   return (
     <Box
       className="card"
-      width={"200px"}
-      // height={"280"}
+      width={"100%"}
+      height={"290"}
       padding={"15px"}
       borderRadius={"10px"}
       bg={"#0f0f0f"}

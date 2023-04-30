@@ -8,6 +8,7 @@ import {
   MenuGroup,
   Text,
 } from "@chakra-ui/react";
+import "../css/home.css";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import profile from "../assets/profile.jpg";
@@ -18,6 +19,11 @@ import { auth_types } from "../redux/types";
 import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 //
 export default function Navbar() {
+  window.addEventListener("scroll", function () {
+    var navbar = document.querySelector(".container-navbar");
+    navbar.classList.toggle("sticky", window.scrollY > 0);
+  });
+  //
   const userSelector = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   const nav = useNavigate();
@@ -31,12 +37,15 @@ export default function Navbar() {
     <Box
       className="container-navbar"
       w={"100%"}
-      bg={"black"}
+      // bg={"black"}
       // position={"fixed"}
       zIndex={1}
       // pl="241px"
     >
-      <Box bgGradient="linear(to-t, black, #464646)" p={"10px 10px"}>
+      <Box
+        //  bgGradient="linear(to-t, black, #464646)"
+        p={"10px 10px"}
+      >
         <Flex justifyContent={"space-between"} alignItems={"center"}>
           <Flex id="right-left" w={"100px"} justifyContent={"space-between"}>
             <IconButton

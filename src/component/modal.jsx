@@ -8,10 +8,20 @@ import {
   Textarea,
   Center,
   Box,
+  Button,
+} from "@chakra-ui/react";
+import {
+  Table,
+  Thead,
+  Tbody,
+  Tr,
+  Th,
+  Td,
+  TableContainer,
 } from "@chakra-ui/react";
 
 import { IoMdClose } from "react-icons/io";
-import { useFormik } from "formik";
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -20,36 +30,6 @@ export function CreatePlaylist(props) {
     require("../assets/default-spotify.png")
   );
 
-  //
-  // const [newPlaylist, setNewPlaylist] = useState({
-  //   title: "",
-  //   desc: "",
-  //   img: "",
-  //   list: [],
-  // });
-
-  // const formik = useFormik({
-  //   initialValues: {
-  //     title: "",
-  //     desc: "",
-  //     img: "",
-  //     list: [],
-  //   },
-  // }),
-  // onSubmit: async () => {
-  //   const newPlaylist = { title, desc, img, list };
-  //   await axios
-  //     .post("http://localhost:2000/newPlaylist", newPlaylist)
-  //     .then((res) => {});
-  // };
-
-  // useEffect(() => {}, [newPlaylist]);
-
-  // function inputHandler(event) {
-  //   const { value, id } = event.target;
-  //   formik.setFieldValue(id, value);
-  // }
-  //
   function input(e) {
     if (!e.target.value) {
       setImgUrl(require("../assets/default-spotify.png"));
@@ -124,19 +104,19 @@ export function CreatePlaylist(props) {
           </Flex>
         </Flex>
         <Flex flexDir={"column"}>
-          {/* <Flex
-            paddingX={"24px"}
-            fontWeight={"bold"}
-            justifyContent={"space-between"}
-          >
-            <Box>Add Musics</Box>
-            <Box>Title</Box>
-            <Box>Artist</Box>
-          </Flex> */}
           <ListMusics />
         </Flex>
+        <Center mt={5}>
+          <Button
+            w={"30%"}
+            bg={"#1ED760"}
+            _hover={{ bg: "#1ED760", color: "black" }}
+          >
+            Save
+          </Button>
+        </Center>
 
-        <Center w="100%">
+        {/* <Center w="100%">
           <Center
             borderRadius={"5px"}
             fontWeight={"600"}
@@ -147,16 +127,37 @@ export function CreatePlaylist(props) {
           >
             SAVE
           </Center>
-        </Center>
+        </Center> */}
       </Flex>
     </>
   );
 }
 
-export function ListMusics(props) {
+export function ListMusics() {
+  const [music, setMusic] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:2000/musics")
+      .then((res) => setMusic(res.data), []);
+  });
+
+  const arr = music.map((music) => {
+    return (
+      <Tr>
+        <Td>
+          <Button size={"xs"} color={"black"}>
+            ADD
+          </Button>
+        </Td>
+        <Td>{music.title}</Td>
+        <Td>{music.singer}</Td>
+      </Tr>
+    );
+  });
   return (
     <>
-      <Flex flexDir={"column"} paddingBottom="10px" gap={"10px"}>
+      {/* <Flex flexDir={"column"} paddingBottom="10px" gap={"10px"}>
         <Grid
           templateColumns="1fr 2fr 1fr"
           columnGap={5}
@@ -176,72 +177,32 @@ export function ListMusics(props) {
           <GridItem w="100%" h="25px"></GridItem>
           <GridItem w="100%" h="25px" fontWeight={"bold"}></GridItem>
           <GridItem w="100%" h="25px" fontWeight={"bold"}></GridItem>
-          <GridItem w="100%" h="25px" fontWeight={"bold"}>
-            <Center>Add</Center>
-          </GridItem>
-          <GridItem w="100%" h="25px">
-            Akhir Cerita Cinta
-          </GridItem>
-          <GridItem w="100%" h="25px">
-            Glenn Fredly
-          </GridItem>
 
-          <GridItem w="100%" h="25px" fontWeight={"bold"}>
-            <Center>Add</Center>
-          </GridItem>
-          <GridItem w="100%" h="25px">
-            Akhir Cerita Cinta
-          </GridItem>
-          <GridItem w="100%" h="25px">
-            Glenn Fredly
-          </GridItem>
-
-          <GridItem w="100%" h="25px" fontWeight={"bold"}>
-            <Center>Add</Center>
-          </GridItem>
-          <GridItem w="100%" h="25px">
-            Akhir Cerita Cinta
-          </GridItem>
-          <GridItem w="100%" h="25px">
-            Glenn Fredly
-          </GridItem>
-
-          <GridItem w="100%" h="25px" fontWeight={"bold"}>
-            <Center>Add</Center>
-          </GridItem>
-          <GridItem w="100%" h="25px">
-            Akhir Cerita Cinta
-          </GridItem>
-          <GridItem w="100%" h="25px">
-            Glenn Fredly
-          </GridItem>
-
-          <GridItem w="100%" h="25px" fontWeight={"bold"}>
-            <Center>Add</Center>
-          </GridItem>
-          <GridItem w="100%" h="25px">
-            Akhir Cerita Cinta
-          </GridItem>
-          <GridItem w="100%" h="25px">
-            Glenn Fredly
-          </GridItem>
-
-          <GridItem w="100%" h="25px" fontWeight={"bold"}>
-            <Center>Add</Center>
-          </GridItem>
-          <GridItem w="100%" h="25px">
-            Akhir Cerita Cinta
-          </GridItem>
-          <GridItem w="100%" h="25px">
-            Glenn Fredly
-          </GridItem>
+          <Box display={"none"}>
+            {props.data?.map((val) => (
+              <Card title={val.title} singer={val.singer} />
+            ))}
+          </Box>
         </Grid>
 
         <Flex gap={"20px"} w="100%" justifyContent={"center"}>
           <Flex cursor={"pointer"}>Prev</Flex>
           <Flex cursor={"pointer"}>Next</Flex>
         </Flex>
-      </Flex>
+      </Flex> */}
+
+      <TableContainer height={200} overflowY={"scroll"}>
+        <Table size={"sm"}>
+          <Thead>
+            <Tr>
+              <Th></Th>
+              <Th>Title</Th>
+              <Th> Artist</Th>
+            </Tr>
+          </Thead>
+          <Tbody>{arr}</Tbody>
+        </Table>
+      </TableContainer>
     </>
   );
 }

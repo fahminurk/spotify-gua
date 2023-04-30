@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
-import Content from "../component/content";
 import { useNavigate } from "react-router-dom";
+import Content from "../component/content";
+import { CreatePlaylist, ListMusics } from "../component/modal";
 import Navbar from "../component/Navbar";
 import Sidebar from "../component/Sidebar";
 import axios from "axios";
 import Playbar from "../component/playbar";
 import { useSelector } from "react-redux";
 import ContentArtist from "../component/contentArtist";
-import { Box } from "@chakra-ui/react";
+import { Box, Modal } from "@chakra-ui/react";
 import "../css/home.css";
 
 export default function HomePage() {
@@ -25,7 +26,7 @@ export default function HomePage() {
   const [playlist, setPlaylist] = useState([]);
   const [homePlaylist, setHomePlaylist] = useState([]);
   const [sidePlaylist, setSidePlaylist] = useState();
-
+  const [music, setMusic] = useState([]);
   const [artis, setArtis] = useState([]);
 
   async function fetchData() {
@@ -62,7 +63,7 @@ export default function HomePage() {
         sidePlaylist={sidePlaylist}
         setPlaylist={setPlaylist}
       />
-      <Box className="konten">
+      <Box className="konten" bg={"black"}>
         <ContentArtist
           key={"contentArtist"}
           data={artis}
