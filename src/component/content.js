@@ -1,8 +1,9 @@
 import { Badge, Box, Divider, Flex, Image, Text, calc } from "@chakra-ui/react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import "../css/home.css";
 import play from "../assets/buttonplay.png";
+import { CreatePlaylist } from "./modal";
 
 export default function Content(props) {
   const userSelector = useSelector((state) => state.auth);
@@ -10,6 +11,8 @@ export default function Content(props) {
   useEffect(() => {
     console.log(props.data);
   }, [props.data]);
+
+  //
 
   return (
     <Box

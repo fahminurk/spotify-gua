@@ -24,6 +24,8 @@ import { IoMdClose } from "react-icons/io";
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 export function CreatePlaylist(props) {
   const [imgUrl, setImgUrl] = useState(
@@ -37,6 +39,7 @@ export function CreatePlaylist(props) {
     }
     setImgUrl(e.target.value);
   }
+  //
 
   return (
     <>
@@ -81,7 +84,7 @@ export function CreatePlaylist(props) {
               w="180px"
               h="40px"
               placeholder="Image URL"
-              onChange={input}
+              id="imgURL"
             ></Input>
           </Flex>
           <Flex flexDir={"column"} justifyContent={"space-between"}>
@@ -91,6 +94,7 @@ export function CreatePlaylist(props) {
               w="280px"
               h="40px"
               placeholder="Title"
+              id="playlist"
             ></Input>
             <Textarea
               bgColor={"#3E3E3E"}
@@ -100,6 +104,7 @@ export function CreatePlaylist(props) {
               h={"100%"}
               resize={"none"}
               placeholder="Description"
+              id="desc"
             ></Textarea>
           </Flex>
         </Flex>
@@ -133,7 +138,7 @@ export function CreatePlaylist(props) {
   );
 }
 
-export function ListMusics() {
+export function ListMusics(props) {
   const [music, setMusic] = useState([]);
 
   useEffect(() => {

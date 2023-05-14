@@ -26,7 +26,6 @@ export default function HomePage() {
   const [playlist, setPlaylist] = useState([]);
   const [homePlaylist, setHomePlaylist] = useState([]);
   const [sidePlaylist, setSidePlaylist] = useState();
-  const [music, setMusic] = useState([]);
   const [artis, setArtis] = useState([]);
 
   async function fetchData() {
